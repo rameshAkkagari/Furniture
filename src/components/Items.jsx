@@ -46,7 +46,7 @@ function Items({products}) {
               <FaRegStar className="text-yellow-500" />
             </div>
             <div className="flex justify-between items-center mt-4">
-              <h3 className="text-xl font-bold">&356</h3>
+              <h3 className="text-xl font-bold">$356</h3>
               <BiSolidPlusCircle size={25} className="text-gray-700 cursor-pointer" />
             </div>
           </div>
