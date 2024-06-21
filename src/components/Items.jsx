@@ -11,53 +11,50 @@ import { BiSolidPlusCircle } from "react-icons/bi";
 function Items({products}) {
     
   return (
-    <div>
-        <Swiper
-       modules={[Navigation, Pagination, Scrollbar, A11y]}
-       spaceBetween={50}
-       slidesPerView={4} // Default number of slides per view
-       navigation
-       loop={true}
-       onSwiper={(swiper) => console.log(swiper)}
-       onSlideChange={() => console.log('slide change')}
-       breakpoints={{
-           // Responsive breakpoints
-           0: {
-               slidesPerView: 1,
-           },
-           765: {
-               slidesPerView: 2,
-           },
-           1024: {
-               slidesPerView: 4,
-           },
-       }}
-    >
-        {products.map((item, index) => (
-            <SwiperSlide key={index} className='swipe'>
-                <li className='bg-white'>
-                    <img className='w-full sm:w-[60vw]' src={item.image} alt={item.title} />
-                    <span>{item.title}</span>
-                    <h4>{item.name}</h4>
-                    <div className='flex'>
-                        <FaRegStar />
-                        <FaRegStar />
-                        <FaRegStar />
-                        <FaRegStar />
-                        <FaRegStar />
-                    </div>
-                    <div className='flex justify-between '>
-                        <h3>&392</h3>
-                        
-                        <BiSolidPlusCircle size={25} />
-                    </div>
-                </li>
-            </SwiperSlide>
-        ))}
-       
-    </Swiper>
-
-    </div>
+    <div className="swiper-container">
+  <Swiper
+    modules={[Navigation, Pagination, Scrollbar, A11y]}
+    spaceBetween={50}
+    slidesPerView={4}
+    navigation
+    loop={true}
+    breakpoints={{
+      0: {
+        slidesPerView: 1,
+      },
+      765: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    }}
+    className="mySwiper"
+  >
+    {products.map((item, index) => (
+      <SwiperSlide key={index} className="swipe">
+        <div className="bg-white rounded-lg p-4">
+          <img className="w-full sm:w-full md:w-[60vw] mx-auto" src={item.image} alt={item.title} />
+          <div className="mt-4 text-center">
+            <h4 className="text-lg font-bold">{item.title}</h4>
+            <p className="text-sm text-gray-600">{item.name}</p>
+            <div className="flex justify-center mt-2">
+              <FaRegStar className="text-yellow-500" />
+              <FaRegStar className="text-yellow-500" />
+              <FaRegStar className="text-yellow-500" />
+              <FaRegStar className="text-yellow-500" />
+              <FaRegStar className="text-yellow-500" />
+            </div>
+            <div className="flex justify-between items-center mt-4">
+              <h3 className="text-xl font-bold">&euro;{item.price}</h3>
+              <BiSolidPlusCircle size={25} className="text-gray-700 cursor-pointer" />
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
 
    
   )
