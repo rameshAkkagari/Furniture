@@ -15,7 +15,7 @@ function Footer() {
         </div>
 
         <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 links'>
-            <ul>
+            <ul className='links'>
                 <li>Services</li>
                 <li>Email Marketing</li>
                 <li>Campaigns</li>
@@ -24,7 +24,7 @@ function Footer() {
         </div>
 
         <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 links'>
-            <ul>
+            <ul className='links'>
                 <li>Furniture</li>
                 <li>Beds</li>
                 <li>Chair</li>
@@ -33,7 +33,7 @@ function Footer() {
         </div>
 
         <div className='w-full md:w-1/2 lg:w-1/3 xl:w-1/4 links'>
-            <ul>
+            <ul className='links'>
                 <li>Follow us</li>
                 <li className='flex gap-2 items-center'>
                     <span><FaFacebookF/></span>
